@@ -1,4 +1,4 @@
-# This preprocessing includes four steps: removing backgroud, green channel, contrast enhancement,subtract patches
+# This preprocessing includes four steps: removing backgroud, green channel, contrast enhancement,subtract patches. 
 
 import csv
 import os
@@ -9,8 +9,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 images = []
-image_path = '/home/travis/data/grey_scale_dataset/training1'
-destination_path = '/home/travis/data/grey_scale_dataset/training2/'
+image_path = '' # Original file path here
+destination_path = '' # Processed file path here
 
 
 def preprocessing(dir,images):
