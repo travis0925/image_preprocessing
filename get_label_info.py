@@ -1,28 +1,17 @@
+
+
 import csv
 import os
 import random
 import shutil
 
-# csvfile = open('trainLabels.csv', 'rb')
-# reader = csv.reader(csvfile)
-# i = 0
-# name = []
-# label = []
-# for line in reader:
-#     if i < 1:
-#         i += 1
-#     else:
-#         name.append(line[0:1])
-#         label.append(line[1:])
-#         print name,label
 
-
-imageFile = '/home/travis/data/fundus_img/kaggle_contrast'
-pathFile = '/home/travis/software/caffe/examples/mAs_detection/bvlc_googlenet/kaggle_label.txt'
+imageFile = '' # image file path
+pathFile = '' # generated label file path
 images = []
 def maketrainList(imageFile, pathFile):
     fobj = open(pathFile, 'a')
-    csvfile = open('trainLabels.csv', 'rb')
+    csvfile = open('trainLabels.csv', 'rb') # orginal csv file path
     reader = csv.reader(csvfile)
     i = 0
     name1 = []
