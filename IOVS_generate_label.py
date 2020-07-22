@@ -1,11 +1,12 @@
+# The following codes are used for generating a label file in txt format, according to the the keyword in the file name. It is written with python 2.6, 
+# which can be easily modified with a higher version of python.
+
 import os
 import shutil
 
-# image_path = '/home/travis/data/IOVS_data/resized_IOVS'
-# image_path = '/home/travis/software/caffe/examples/mAs_detection/bvlc_googlenet/ma_aug/testingData40'
-image_path = '/home/travis/software/caffe/examples/mAs_detection/bvlc_googlenet/ma_aug/trainingData60'
-labelFile = '/home/travis/data/grey_scale_dataset/trainLabel_60.txt'
-# destination = '/home/travis/data/grey_scale_dataset/test'
+image_path = '' # Your file path here
+labelFile = '' # location of the generated label file
+
 fobj = open(labelFile, 'a')
 images = []
 
