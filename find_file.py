@@ -1,3 +1,5 @@
+# The file is used for finding specific files and saved them in a new location.
+
 import os
 import cv2
 
