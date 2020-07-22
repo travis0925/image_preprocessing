@@ -1,5 +1,7 @@
-# The following codes are used for generating a label file in txt format, according to the the keyword in the file name. It is written with python 2.6, 
-# which can be easily modified with a higher version of python.
+"""
+The following codes are used for generating a label file in txt format, according to the the keyword in the file name. It is written with python 2.6, 
+which can be easily modified with a higher version of python.
+"""
 
 import os
 import shutil
