@@ -1,3 +1,5 @@
+# This file is used for generating label files in experiments with Caffe.
+
 import os
 
 images=[]
@@ -20,5 +22,5 @@ def maketrainList(imageFile, pathFile):
     fobj.close()
 
 
-maketrainList('/home/travis/software/caffe/examples/mAs_detection/bvlc_googlenet/ma_aug/testingData40', '/home/travis/data/grey_scale_dataset/testLabel_40.txt')
-#maketrainList('/home/travis/software/caffe/examples/mAs_detection/bvlc_googlenet/ma_aug/trainingData60', '/home/travis/data/grey_scale_dataset/trainLabel_60.txt')
+maketrainList('bvlc_googlenet/ma_aug/testingData40', 'data/grey_scale_dataset/testLabel_40.txt')
+#maketrainList('bvlc_googlenet/ma_aug/trainingData60', 'data/grey_scale_dataset/trainLabel_60.txt')
