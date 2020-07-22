@@ -1,12 +1,17 @@
+"""
+This file is aimed for extracting the coordinates of the microaneurysms from the xml file and cropping the lesions with a custome size.
+The orginal images are from ROC dataset.
+"""
+
 import xml.etree.cElementTree as et
 import os
 from PIL import Image
 from matplotlib import pyplot as plt
 
-img_path = '/home/travis/data/fundus_img/ROCtraining/'
-crop_path = '/home/travis/data/fundus_img/ROCtraining/crop2/'
-info_path = '/home/travis/data/fundus_img/ROCtraining/roc_coor1.txt'
-xml_path = '/home/travis/data/fundus_img/ROCtraining/annotations-consensus-ma-only.xml'
+img_path = '' # the original image file path 
+crop_path = '' # the extracted pathches path 
+info_path = '' # The coordinate info txt file path here
+xml_path = '/ROCtraining/annotations-consensus-ma-only.xml' # the xml file path 
 tree = et.parse(xml_path)
 root = tree.getroot()
 h = 60
@@ -24,10 +29,7 @@ for child in root:
         origin_y = origin.get('y')
         radius = mark.find('radius')
         r = int(radius.text)
-        # coor1 = int(origin_x) - r
-        # coor2 = int(origin_y) - r
-        # coor3 = int(origin_x) + r
-        # coor4 = int(origin_y) + r
+
         x1 = int(origin_x) - r
         y2 = int(origin_y) - r
         x2 = int(origin_x) + r
