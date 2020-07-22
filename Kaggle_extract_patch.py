@@ -1,3 +1,9 @@
+"""
+This file is dealing with the fundus image dataset downloaded from Kaggle, 
+which used for cropping images with a custom overlapping ratio 
+and size and generating related label file.
+"""
+
 import os
 import numpy as np
 import scipy.ndimage as ndimage
@@ -98,10 +104,10 @@ def extract_patches(image, patchshape, overlap_allowed=0.9, cropvalue=None,
     # C-ordered array).
     return np.concatenate([pat[np.newaxis, ...] for pat in patches], axis=0)
 patch_shape = [175,175]
-labelFile = '/home/travis/data/grey_scale_dataset/kaggle_patch_label.txt'
-annotation_path = '/home/travis/data/fundus_img/trainLabels.csv'
-img_path = '/home/travis/data/grey_scale_dataset/training1'
-destination = '/home/travis/data/grey_scale_dataset/training2/'
+labelFile = '' # Generated label file path
+annotation_path = 'trainLabels.csv' # Original label 
+img_path = ''  # Original image file path
+destination = '' # Extracted pathes path
 images = []
 images = preprocessing(img_path,images)
 num_of_img = len(images)
